@@ -1,0 +1,25 @@
+.about {
+  position: relative;
+  z-index: 10;
+  // width: 100%;
+  height: 100vh;
+  background-color:$PrimaryBackgroundDark;
+  padding: 0 6rem 0 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  article {
+    margin-left: 4rem;
+    // margin-right: 4rem;
+    h2 {
+      color: $PrimaryTextBrightLight;
+      margin-bottom: 1rem;
+      // text-align: center;
+    }
+    p {
+      width: 80%;
+      color: $PrimaryTextLight;
+      font-size: 1.6rem;
+    }
+  }
+}

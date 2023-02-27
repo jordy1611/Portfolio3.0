@@ -1,0 +1,97 @@
+.connect {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: $PrimaryBackgroundDark;
+  padding: 0 6rem 0 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  .connect-info{
+    width: 40%;
+    margin-left: 4rem;
+    h3 {
+      color: $PrimaryTextBrightLight;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: $PrimaryTextLight;
+    }
+    p {
+      color: $PrimaryTextLight;
+    }
+  }
+  .connect-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 4rem;
+    label {
+      color: $PrimaryTextLight;
+      font-size: 1.2rem;
+      margin-bottom: .5rem
+    }
+    input, textarea {
+      width: 100%;
+      font-size: 1.5rem;
+      background: $PrimaryInputBackground;
+      color: $PrimaryTextLight;
+      box-shadow: none;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      padding: 0 1rem;
+    }
+    input {
+      margin-bottom: 2rem;
+      height: 2.8rem;
+    }
+    textarea {
+      height: 8rem;
+      min-height: 8rem;
+      max-height: 12rem;
+      max-width: 100%;
+      min-width: 100%;
+      margin-bottom: 2rem;
+    }
+    .connect-bar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      // height: 4rem;
+      a.connect-button {
+        cursor: pointer;
+        font-size: 1.4rem;
+        @include brSlider($PrimaryTextBrightDark);
+        width: min-content;
+        color: $PrimaryTextBrightDark;
+        margin-right: .5rem;
+        -webkit-transition: color 1s;
+        transition: color 1s;
+        &:hover {
+          color: $PrimaryTextBrightLight;
+        }
+        &:hover + svg {
+          animation: none;
+          fill: $PrimaryTextBrightLight;
+        }
+      }
+      svg {
+        fill: $PrimaryTextBrightDark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include wiggle(8deg);
+        transition: fill 1.5s;
+        cursor: pointer;
+        &:hover {
+          animation: none;
+          fill: $PrimaryTextBrightLight;
+        }
+      }
+    }
+  }
+}

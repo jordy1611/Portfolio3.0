@@ -1,0 +1,38 @@
+.changing-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.65rem;
+  font-size: 1.5rem;
+  overflow-y: hidden;
+  .string{
+    // pass in a size
+    @include changingTextContent(1.5rem);
+  }
+  .hello-world {
+    color: rgb(205,144,117);
+  }
+
+  .text {
+    color: $PrimaryTextLight;
+        .blue {
+      color: rgb(138,191,212);
+    }
+    .white {
+      color: rgb(171,181,184);
+    }
+    .yellow {
+      color: rgb(202,191,137);
+    }
+    .orange {
+      color:  rgb(205,144,117);
+    }
+    .br-orange {
+      color: rgb(209,124,89);
+    }
+    .red {
+      color:rgb(174,75,74)
+    }
+  }
+
+}

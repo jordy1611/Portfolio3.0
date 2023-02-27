@@ -1,0 +1,118 @@
+// @mixin loginSizing($width, $height, $marginLR, $marginTB) {
+//   width: $width;
+//   height: $height;
+//   margin: $marginTB $marginLR $marginTB $marginLR;
+//  }
+
+@mixin bgSlider($startColor, $endColor) {
+  
+  	// padding: 5px; 
+	display: inline-block;
+	text-decoration: none; 
+	transition: all 0.3s;
+	background-size: 200%; 
+  transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+        color .2s linear;
+      transition-delay: 0.0s, 0.15s;
+	background-image: linear-gradient(to left, $endColor 50%, $startColor 50%); 
+
+  &:hover {
+    background-position: -100% 200%; 
+  }
+}
+
+@mixin brSlider($color) {
+  &::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: $color;
+  transition: width .4s ease-in;
+}
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@mixin alternateColor($color1, $color2, $color3){
+  animation: color-animation 5s linear infinite;
+
+  @keyframes color-animation {
+    0%  {color: $color1}
+    32% {color: $color1}
+    33% {color: $color2}
+    65% {color: $color2}
+    66% {color: $color3}
+    99% {color: $color3}
+    100% {color: $color1}
+  }
+}
+
+@mixin changingTextContent($fontSize) {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: move 10s infinite;
+  &.start-string {
+    text-align: right;
+  }
+  &.end-string {
+    text-align: left
+  }
+  .text {
+    position: relative;
+    top: ($fontSize * 2.3);
+    animation: white-out 7s infinite;
+  }
+ 
+  @keyframes move {
+    20% {
+      transform: translatey(($fontSize * -1.15));
+      opacity: 1;
+    }
+    40% {
+      transform: translatey(($fontSize * -1.72));
+    }
+    40% {
+      transform: translatey(($fontSize * -2.3));
+    }
+    60% {
+      transform: translatey(($fontSize * -3.38))
+    }
+    80% {
+      transform: translatey(($fontSize * -4.65))
+    }  
+  }
+}
+
+@mixin wavy-path-right() {
+  // offset-path: path("M20,20 C20,100 200,0 200,100");
+  offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
+  animation: move 3000ms infinite alternate ease-in-out;
+  // width: 40px;
+  // height: 40px;
+  // background: cyan;
+  @keyframes move {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+}
+
+@mixin wiggle($deg) {
+  display: inline-block;
+  animation: wiggle 2s infinite;
+  // transition: animation 1s ease-in-out;
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    80% { transform: rotate(0deg); }
+    85% { transform: rotate($deg); }
+    95% { transform: rotate(-$deg); }
+    100% { transform: rotate(0deg); }
+  }
+}

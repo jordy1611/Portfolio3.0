@@ -1,0 +1,78 @@
+.Header {
+  &.bg-neutral {
+    background-color:rgba(black, .7);
+    background-color: #0f1922cc;
+    color: $PrimaryTextLight;
+    svg {
+      fill: $PrimaryTextLight;
+    }
+    .resume-button {
+      color: $PrimaryTextBrightLight;
+      @include bgSlider($transparent, $PrimaryTextBrightFade);
+    }
+  }
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: .5rem 6rem 0 6rem;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: $PrimaryTextDark;
+  // font-weight: bolder;
+  transition-duration: .2s;
+  h2 {
+    margin: 0;
+    margin-right: auto;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition-duration: .1s;
+    &:hover {
+        transform: scale(1.02)
+      }
+  }
+  a {
+    margin-right: 2rem;
+    font-size: 1.1rem;
+    transition-duration: .1s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.08);
+    }
+    &:nth-last-child(2) {
+      // margin-right: 1rem;
+    }
+    &.slide {
+      @include brSlider($PrimaryBackgroundDark);
+    }
+    svg {
+      fill: $PrimaryTextDark;
+      margin-right: 0rem;
+      cursor: pointer;
+      &:nth-last-child(1) {
+        // margin-right: 0;
+      }
+      &:hover {
+        transform: scale(1.08)
+      }
+    }
+  }
+  .resume-button {
+    color: $PrimaryTextBrightDark;
+    border: solid 2px;
+    padding: .3rem .5rem;
+    border-radius: 5px;
+    @include bgSlider($transparent, $PrimaryBackgroundDark);
+     &:hover {
+        transform: scale(1.02);
+        color: $PrimaryTextBrightLight;
+    }
+  }
+}
+// this gets a different class when there's movement
