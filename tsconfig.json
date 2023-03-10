@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "webpack.confing.js", "config-overides.js"  ]
 }

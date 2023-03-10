@@ -1,11 +1,18 @@
 import React, { useEffect } from 'react';
-
+import { sendFormEmail } from '../Async/Async';
+// require('dotenv').config()
 type ConnectProps = {
 }
 
 // error handling
 
 function About(props: ConnectProps) {
+
+  const sendInputEmail = async () => {
+    console.log('test', process.env.TEST)
+    // await sendFormEmail();
+  }
+
   return (
     <div className="connect sliding-page">
       <div className="connect-info">
@@ -25,7 +32,7 @@ function About(props: ConnectProps) {
         <label htmlFor='message-input'>Message</label>
         <textarea id='message-input'></textarea>
         <div className="connect-bar">
-          <a className='connect-button'>Connect</a>
+          <a className='connect-button' onClick={sendInputEmail}>Connect</a>
           <svg className='submit-path' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
             width="18" height="18" viewBox="0 0 97.103 97.104"
             >

@@ -5,6 +5,8 @@ import Home from '../Home/Home';
 import About from '../About/About';
 import Work from '../Work/Work';
 import Connect from '../Connect/Connect';
+require('dotenv').config({path:'.env'})
+
 // import TextSphere from '../Elements/TextSphere/TextSphere';
 
 function App() {
