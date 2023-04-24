@@ -24,6 +24,7 @@
     }
   }
   .connect-form {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -92,6 +93,26 @@
           fill: $PrimaryTextBrightLight;
         }
       }
+    }
+    .name-warning, .email-warning, .message-warning, .form-warning {
+      color: $PrimaryTextSad;
+      // font-size: .5rem;
+      // line-height: .5rem;
+      font-size: .9rem;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 1%;
+      z-index: 5;
+    };
+    .name-warning {
+      top: 18%;
+    }
+    .email-warning {
+      top: 43%;
+    }
+    .message-warning {
+      top: 87%;
     }
   }
 }
