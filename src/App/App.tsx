@@ -32,9 +32,9 @@ function App() {
       case 'About':
         aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
-      case 'Work':
-        workRef.current?.scrollIntoView({ behavior: 'smooth' });
-        break;
+      // case 'Work':
+      //   workRef.current?.scrollIntoView({ behavior: 'smooth' });
+      //   break;
       case 'Connect':
         connectRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
@@ -48,7 +48,7 @@ function App() {
       <Header scrollAtTop={scrollAtTop} scrollToSection={scrollToSection} />
       <Home />
       <div ref={aboutRef}><About /></div>
-      <div ref={workRef}><Work /></div>
+      {/* <div ref={workRef}><Work /></div> */}
       <div ref={connectRef}><Connect /></div>
     </main>
   );
