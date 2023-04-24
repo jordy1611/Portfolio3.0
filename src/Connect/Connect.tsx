@@ -17,27 +17,23 @@ function About(props: ConnectProps) {
   const [nameError, setNameError] = useState<string>('At least tell me your name!');
   const [emailError, setEmailError] = useState<string>('Please tell me how to contact you!');
   const [messageError, setMessageError] = useState<string>('Please at least say hello...');
-  const [formMessage, setFormMessage] = useState<string>('Oops, something went wrong!');
-
-
 
   const sendInputEmail = async () => {
     setValidateInputs(true);
-    console.log('big f', nameError)
     if (isTextValid(name) && isTextValid(message) && isTextValid(email) && isEmailFormatValid(email)) {
+      await sendFormEmail(name, email, message);
       setValidateInputs(false);
       setName('');
       setEmail('');
       setMessage('');
       setNameError('At least tell me your name!');
       setEmailError('Please tell me how to contact you!')
-      setMessageError('Please at least say hello...')
-    } else {
-      setFormMessage('Oops, something went wrong!');
-    }
+      setMessageError('Please at least say hello...');
+    }   
   }
+
   const validateName = (inputValue: HTMLInputElement["value"]) => {
-    const value: string = inputValue?.toString()?.trim() ?? '';
+    const value: string = inputValue?.toString() ?? '';
     if (!isTextValid(value)) {
         setNameError('At least tell me your name!');
     } else {
@@ -47,7 +43,7 @@ function About(props: ConnectProps) {
   }
 
   const validateEmail = (inputValue?: HTMLInputElement["value"]) => {
-    const value: string = inputValue?.toString()?.trim() ?? '';
+    const value: string = inputValue?.toString().trim() ?? '';
     if (!isTextValid(value)) {
       setEmailError('Please tell me how to contact you!');
     } else if (!isEmailFormatValid(value)) {
@@ -55,17 +51,17 @@ function About(props: ConnectProps) {
     } else {
       setEmailError('');
     }
-    setEmail(value)
+    setEmail(value);
   }
 
   const validateMessage = (inputValue?: HTMLInputElement["value"]) => {
-    const value: string = inputValue?.toString()?.trim() ?? '';
+    const value: string = inputValue?.toString() ?? '';
     if (!isTextValid(value)) {
       setMessageError('Please at least say hello...');
     } else {
       setMessageError('');
     }
-    setMessage(value)
+    setMessage(value);
   }
 
   const isTextValid = (text: string) => {
