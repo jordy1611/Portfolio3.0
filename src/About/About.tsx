@@ -5,21 +5,6 @@ type AboutProps = {
 }
 function About(props: AboutProps) {
 
-  // useEffect(() => {
-  //   const tagCloud = document.querySelector('tagcloud');
-  //   console.log(tagCloud)
-  //   const TagCloud = require("TagCloud");
-  //   const container = ".content";
-  //   TagCloud(container, texts, {
-  //     // radius: Screening(),
-  //     maxSpeed: "normal",
-
-  //   });
-
-  //   // TagCloud('.content', texts);
-  // },[])
-
-
   return (
     <div className="about sliding-page">   
       <TextSphere />
