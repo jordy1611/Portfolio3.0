@@ -21,8 +21,6 @@ const TextSphere = () => {
         keep: true
       });
     }
-
-    // TagCloud('.content', texts);
   }, [])
   return (
     <span className="content"></span>
