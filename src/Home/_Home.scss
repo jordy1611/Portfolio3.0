@@ -10,16 +10,12 @@
   // height might be weird
   // do a different size type
   height: 100vh;
-  // background-color: burlywood;
-  // background-image: url('../Assets/andromeda1.jpeg');
-  // background-size: cover;
-  // background-position: right 10%;
   background-color: $PrimaryBackgroundLight;
   color: $PrimaryTextDark;
   h2 {
     font-size: 4rem;
     font-weight: bold;
-    width: 40%;
+    width: 50%;
     margin-top: 12%;
     span {
       @include alternateColor(#3D8DAE, #DF8453, #E4A9A8);
