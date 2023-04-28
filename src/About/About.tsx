@@ -9,18 +9,16 @@ function About(props: AboutProps) {
     <div className="about sliding-page">   
       <TextSphere />
       <article>
-        <h2>About</h2>
-        {/* sliding text animation */}
-        <h3>Jordan Shryock</h3>
-        <p>Blah blah blah. I'm really neat. I like being neat in neat places. Blah blah blah blah blah blah blah blah blah blah blah. I'm a neat person. I like doing neat stuff.</p>
+        <h3>About</h3>
+        <p>My passion for engineering stems from being able to combine my creative side with analytical problem solving.</p>
         <br/>
-        <p>My dog is very neat, he is so very neat.</p>
+        <p>I love jumping into new environments and taking ownership of features, from design to release.</p>
         <br />
-        <p>WOOOOOO</p>
+        <p>I believe in delivering scalable and, most importantly, consistent code.</p>
         < br/>  
-        <p>Blah blah blah. I'm really neat. I like being neat in neat places. Blah blah blah blah blah blah blah blah blah blah blah. I'm a neat person. I like doing neat stuff.</p>
+        <p>I'm always look opportunities to collaborate and explore new concepts!</p>
         <br />
-       
+
       </article>
     </div>
   );

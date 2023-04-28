@@ -10,6 +10,9 @@
       color: $PrimaryTextBrightLight;
       @include bgSlider($transparent, $PrimaryTextBrightFade);
     }
+    a.slide {
+      @include brSlider($PrimaryBackgroundLight);
+    }
   }
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -24,7 +27,6 @@
   flex-direction: row;
   align-items: center;
   color: $PrimaryTextDark;
-  // font-weight: bolder;
   transition-duration: .2s;
   h2 {
     margin: 0;
@@ -45,9 +47,6 @@
     &:hover {
         transform: scale(1.08);
     }
-    &:nth-last-child(2) {
-      // margin-right: 1rem;
-    }
     &.slide {
       @include brSlider($PrimaryBackgroundDark);
     }
@@ -55,9 +54,6 @@
       fill: $PrimaryTextDark;
       margin-right: 0rem;
       cursor: pointer;
-      &:nth-last-child(1) {
-        // margin-right: 0;
-      }
       &:hover {
         transform: scale(1.08)
       }
@@ -75,4 +71,3 @@
     }
   }
 }
-// this gets a different class when there's movement

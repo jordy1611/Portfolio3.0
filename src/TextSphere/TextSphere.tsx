@@ -2,10 +2,10 @@ import { useEffect } from "react";
 
 const TextSphere = () => {
 
-  const texts = ['ReactJS', 'Hooks', 'AngularTS', 'JavaScript',
-    'Typescript', 'Redux', 'ASP.NET', 'Jasmine', 'Node', 'Jest',
+  const texts = ['ReactJS', 'Hooks', 'Angular', 'JavaScript',
+    'Typescript', 'Redux', 'ASP.NET', 'Node', 'Jest',
     'Linq', 'EF Core', 'SQL', 'Unit Testing', 'GraphQL', 'ES5/ES6',
-    'REST', 'AWS'
+    'REST', 'AWS', 'CI/CD'
   ];
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const TextSphere = () => {
       const TagCloud = require("TagCloud");
       const container = ".content";
       TagCloud(container, texts, {
-        radius: 320,
+        radius: 280,
         maxSpeed: 'fast',
         initSpeed: 'fast',
         direction: 135,
