@@ -77,8 +77,10 @@ function About(props: ConnectProps) {
     <div className="connect sliding-page">
       <div className="connect-info">
         <h3>Connect</h3>
-        <h2>Sophisticated AF</h2>
+        <h2>Reach Out!</h2>
+        <br />
         <p>Whether I'm seeking opportunities or not, I'm always open to making new connections! 
+          <br />
           <br/>
           Please reach out if you have any questions or just want to say hi.
         </p>

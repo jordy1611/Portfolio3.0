@@ -12,9 +12,13 @@
     margin-left: 4rem;
     // margin-right: 4rem;
     h2 {
-      color: $PrimaryTextBrightLight;
+      color: $PrimaryTextLight;
       margin-bottom: 1rem;
       // text-align: center;
+    }
+    h3 {
+      color: $PrimaryTextBrightLight;
+      margin-bottom: 1rem;
     }
     p {
       width: 80%;
